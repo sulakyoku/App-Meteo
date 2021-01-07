@@ -1,4 +1,7 @@
 
+
+
+
 function loadmeteo( ville ) {
     var url2 = 'https://www.prevision-meteo.ch/services/json/'+ville;
 

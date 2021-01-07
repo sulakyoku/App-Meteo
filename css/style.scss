@@ -10,13 +10,17 @@ img {
         padding-bottom: 30px;
     }
 }
+.container{
+    background: linear-gradient(#2980B9, #6dd5ed);
+   
+}
 
 .ville {
     display: flex;
     justify-content: center;
 }
 .row{
-    background: linear-gradient(#2980B9, #6dd5ed);
+    
     display: flex;
     justify-content: center;
     align-content: center;
@@ -141,3 +145,5 @@ button {
 .currentday h2{
     text-align: center;
 }
+
+

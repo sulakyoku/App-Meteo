@@ -12,6 +12,11 @@ img {
   padding-bottom: 30px;
 }
 
+.container {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2980B9), to(#6dd5ed));
+  background: linear-gradient(#2980B9, #6dd5ed);
+}
+
 .ville {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,8 +27,6 @@ img {
 }
 
 .row {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2980B9), to(#6dd5ed));
-  background: linear-gradient(#2980B9, #6dd5ed);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
