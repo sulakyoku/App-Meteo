@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <meta name="theme-color" content="#ff00ff"/>
+    <link rel="icon" sizes="512x512" href="/images/transformer-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <!-- reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="/images/transformer-icon.png">
+    <!-- multiple icons for IE -->
+    <meta name="msapplication-square310x310logo" content="/images/transformer-icon.png">
+    <link rel="apple-touch-icon" href="/images/transformer-icon.png">
+    <meta name="msapplication-square70x70logo" content="/images/transformer-icon.png">
+    <meta name="msapplication-square150x150logo" content="/images/transformer-icon.png">
+    <meta name="msapplication-wide310x150logo" content="/images/transformer-icon.png">
+
+    <title>SEM Meteo</title>
+</head>
+<body>
+    <!--<h1>SEM</h1>-->
+    
+    
+    <div class="container">
+        <div class="row">
+
+
+            <input type="text" id="villechoisi" >
+            <button type="button" aria-label="search" class="btn btn-light" id="go"><i class="fas fa-search"></i></button>
+            <button type="button" aria-label="return" class="btn btn-light" id="gomp"><i class="fas fa-map-marker-alt"></i></button>
+
+
+            <div class="col-12 currentday">
+                <h1 class="ville"></h1>
+              
+                <img src="" alt="">
+                <h2></h2>
+                
+                <div class="date"></div>
+                <div class="temperature"></div>
+                
+            </div>
+
+            <div class="col-12 days day0">
+                <div class="left">
+                        <div class="date"></div>
+                        <div class="tmax"></div>
+                        <div class="tmin"></div>
+                </div>
+                <div class="right">
+                        <h2></h2>
+                        <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="col-12 days day1">
+                <div class="left">
+                    <div class="date"></div>
+                    <div class="tmax"></div>
+                    <div class="tmin"></div>
+            </div>
+            <div class="right">
+                    <h2></h2>
+                    <img src="" alt="">
+            </div>
+            </div>
+
+            <div class="col-12 days day2">
+                <div class="left">
+                    <div class="date"></div>
+                    <div class="tmax"></div>
+                    <div class="tmin"></div>
+            </div>
+            <div class="right">
+                    <h2></h2>
+                    <img src="" alt="">
+            </div>
+            </div>
+
+            <div class="col-12 days day3">
+                
+                <div class="left">
+                    <div class="date"></div>
+                    <div class="tmax"></div>
+                    <div class="tmin"></div>
+            </div>
+            <div class="right">
+                    <h2></h2>
+                    <img src="" alt="">
+            </div>
+                
+            </div>
+
+            <div class="col-12 days day4">
+                <div class="left">
+                    <div class="date"></div>
+                    <div class="tmax"></div>
+                    <div class="tmin"></div>
+            </div>
+            <div class="right">
+                    <h2></h2>
+                    <img src="" alt="">
+            </div>
+            </div>
+
+            <button id="btnAdd" class="btn-meteo btn btn-primary d-none">Installer Meteo SEM</button>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+    <script src="sw.js"></script>
+
+    <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                   .register('/sw.js')
+                   .then(function() { console.log("Service Worker Registered"); });
+        }
+      
+      
+        // fonction qui check si appli installable
+        window.addEventListener('beforeinstallprompt', (e) => {
+            console.log("beforeinstallprompt");
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        // Update UI notify the user they can add to home screen
+        showInstallPromotion();
+      
+      });
+      
+      function  showInstallPromotion() {
+      //  alert("ok on peut installer");
+      
+       $('#btnAdd').removeClass('d-none');
+      
+      }
+      
+      var btnAdd = document.getElementById("btnAdd");
+      
+      btnAdd.addEventListener('click', (e) => {
+      // hide our user interface that shows our A2HS button
+      btnAdd.style.display = 'none';
+      // Show the prompt
+      deferredPrompt.prompt();
+      // Wait for the user to respond to the prompt
+      deferredPrompt.userChoice
+        .then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+        });
+      });
+       
+         </script>
+</body>
+</html>

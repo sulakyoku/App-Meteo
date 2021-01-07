@@ -1,0 +1,160 @@
+img {
+  width: 80px;
+}
+
+.currentday {
+  height: 500px;
+}
+
+.currentday img {
+  width: 200px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ville {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2980B9), to(#6dd5ed));
+  background: linear-gradient(#2980B9, #6dd5ed);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.row .currentday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row .currentday h1 {
+  text-align: center;
+}
+
+h2, div {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.right {
+  text-align: center;
+}
+
+.days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
+  margin-bottom: 5px;
+}
+
+.days .left {
+  width: 50%;
+  padding: 10px;
+  padding-left: 15px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-right: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.days .right {
+  padding: 10px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-left: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.days .right h2 {
+  font-size: 1.2rem;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  margin: 5px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  margin: 5px;
+  margin-top: 15px;
+}
+
+.fa-search {
+  color: white;
+}
+
+.fa-map-marker-alt {
+  color: white;
+}
+
+.btn-meteo {
+  margin-bottom: 30px;
+}
+
+.btn-meteo:hover {
+  background-color: rgba(255, 255, 255, 0.151) !important;
+  border: 2px solid rgba(255, 255, 255, 0.219) !important;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+}
+
+.currentday h2 {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
